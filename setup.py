@@ -25,8 +25,9 @@ setup(
     # py_modules=["my_module"],
     packages=find_packages(exclude=['docs', 'tests']),
     python_requires='!=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, <4',
-    install_requires=['h5py>=2.9.0',
-                      'h5pyd>=0.4.0'],
+    install_requires=[
+        'h5py>=2.9.0',
+        'h5pyd @ git+https://github.com/HDFGroup/h5pyd.git#egg=h5pyd-0.4.0'],
     # extras_require={},
     # package_data={},
     # data_files=[],
