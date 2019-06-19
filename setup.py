@@ -1,12 +1,13 @@
 from setuptools import setup, find_packages
+from pathlib import Path
 
 
 setup(
     name='h5py_switch',
     version='0.0.1',
     description='Either h5py or h5pyd. Seamlessly.',
-    # long_description=long_description,
-    # long_description_content_type='text/markdown',
+    long_description=Path('./README.md').open('rt', encoding='utf-8').read(),
+    long_description_content_type='text/markdown',
     url='https://github.com/ajelenak/h5py_switch',
     author='Aleksandar Jelenak',
     author_email='aleksandar.jelenak@mailg.com',
