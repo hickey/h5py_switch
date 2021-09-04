@@ -16,7 +16,7 @@ else:
 def File(path, mode='a', **kwargs):
     """Either h5py.File or h5pyd.File depending on path."""
     if isinstance(path, str):
-        if path.startswith(('http://', 'https://', 'hdf5://')) or kwargs['endpoint']:
+        if path.startswith(('http://', 'https://', 'hdf5://')) or 'endpoint' in kwargs:
             if no_h5pyd:
                 raise ImportError(
                     'h5pyd package is required for: {}'.format(path))
